@@ -1,18 +1,18 @@
-# Next.js 16 (Beta) Starter (core) [[LIVE DEMO](https://nextjs-16-starter-core.vercel.app/)]
+# Next.js 16 Starter (core) [[LIVE DEMO](https://nextjs-16-starter-core.vercel.app/)]
 
  ![MIT License](https://img.shields.io/badge/license-MIT-blue) [![TypeScript](https://badgen.net/badge/icon/typescript?icon=typescript&label)](https://typescriptlang.org) ![ESLint](https://img.shields.io/badge/code%20style-eslint-brightgreen) ![GitHub stars](https://img.shields.io/github/stars/siddharthamaity/nextjs-16-starter-core?style=social) ![GitHub forks](https://img.shields.io/github/forks/siddharthamaity/nextjs-16-starter-core?style=social) [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/siddharthamaity)
 
-*This is the core version for Next.js 16 (Beta) Starter, you may be interested in other templates too -*
-- [**Next.js 16 (Beta) Starter with Tailwind CSS**](https://github.com/siddharthamaity/nextjs-16-starter-tailwind)
-- [**Next.js 16 (Beta) Starter with Shadcn UI**](https://github.com/siddharthamaity/nextjs-16-starter-shadcn)
+*This is the core version for Next.js 16 Starter, you may be interested in other templates too -*
+- [**Next.js 16 Starter with Tailwind CSS**](https://github.com/siddharthamaity/nextjs-16-starter-tailwind)
+- [**Next.js 16 Starter with Shadcn UI**](https://github.com/siddharthamaity/nextjs-16-starter-shadcn)
 
-Welcome to the **Next.js 16 (Beta) Starter** repository! This starter template is built with Next.js 16 (Beta), React 19, TypeScript 5 and comes packed with several powerful tools and configurations to accelerate your project setup and streamline development workflows using VS Code.
+Welcome to the **Next.js 16 Starter** repository! This starter template is built with Next.js 16, React 19, TypeScript 5 and comes packed with several powerful tools and configurations to accelerate your project setup and streamline development workflows using VS Code.
 
-![Next.js 16 (Beta) Starter](public/images/screenshot.png)
+![Next.js 16 Starter](public/images/screenshot.png)
 
 ## 🚀 What's Included
 
-- **Next.js 16 (Beta)**
+- **Next.js 16**
 - **React 19**
 - **TypeScript 5**
 - **ESLint 9**
