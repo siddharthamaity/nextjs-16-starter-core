@@ -20,8 +20,8 @@ Welcome to the **Next.js 16 Starter** repository! This starter template is built
 - **App Directory**
 - **System, Light & Dark Mode**
 - **Next.js Bundle Analyzer**
-- **Dockerfile** with Node.js 24.11.0 (Alpine)
-- **Dockerfile.bun** with Bun 1.3.1 (Alpine)
+- **Dockerfile** with Node.js 24.11.1 (Alpine)
+- **Dockerfile.bun** with Bun 1.3.2 (Alpine)
 
 ### 🛠️ ESLint Plugins
 
