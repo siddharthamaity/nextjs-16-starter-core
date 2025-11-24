@@ -20,7 +20,7 @@
     },
     "devDependencies": {
         "@eslint/js": "^9.39.1",
-        "@next/bundle-analyzer": "16.0.3",
+        "@next/bundle-analyzer": "16.0.4",
         "@next/eslint-plugin-next": "16.0.3",
         "@trivago/prettier-plugin-sort-imports": "^6.0.0",
         "@types/node": "^24.10.1",
