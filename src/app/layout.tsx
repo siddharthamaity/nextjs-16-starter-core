@@ -5,8 +5,6 @@ import localFont from 'next/font/local';
 
 import { ThemeProvider } from 'next-themes';
 
-import '@/app/globals.css';
-
 import './globals.css';
 
 const geistSans = localFont({
@@ -31,7 +29,7 @@ const Layout = ({ children }: Readonly<{ children: ReactNode }>) => {
         // ? https://react.dev/reference/react-dom/client/hydrateRoot#suppressing-unavoidable-hydration-mismatch-errors
         <html suppressHydrationWarning lang='en'>
             <body className={`${geistSans.variable} ${geistMono.variable}`}>
-                <ThemeProvider>{children}</ThemeProvider>
+                <ThemeProvider attribute='data-theme'>{children}</ThemeProvider>
             </body>
         </html>
     );

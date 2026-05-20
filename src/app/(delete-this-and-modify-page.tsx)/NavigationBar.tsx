@@ -8,7 +8,10 @@ const NavigationBar = () => {
     return (
         <div className='navigation-bar'>
             <ThemeSwitch />
-            <Link href='https://github.com/SiddharthaMaity/nextjs-16-starter-core' target='_blank'>
+            <Link
+                href='https://github.com/SiddharthaMaity/nextjs-16-starter-core'
+                target='_blank'
+                rel='noopener noreferrer'>
                 <svg xmlns='http://www.w3.org/2000/svg' className='github-icon' viewBox='0 0 24 24'>
                     <path
                         fill='currentColor'

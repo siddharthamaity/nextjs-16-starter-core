@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import './ExtensionDetails.css';
@@ -5,7 +6,7 @@ import './ExtensionDetails.css';
 const RECOMMENDED_EXTENSIONS: string[] = [
     'formulahendry.auto-close-tag', // ? https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag
     'aaron-bond.better-comments', // ? https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments
-    'mikestead.dotenv', // ? https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+    'mikestead.dotenv', // ? https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv
     'EditorConfig.EditorConfig', // ? https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
     'dbaeumer.vscode-eslint', // ? https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
     'MikeBovenlander.formate', // ? https://marketplace.visualstudio.com/items?itemName=MikeBovenlander.formate
@@ -59,6 +60,8 @@ const fetchExtensionDetails = async (extension: string): Promise<ExtensionDetail
         })
     });
 
+    if (!response.ok) throw new Error(`Failed to fetch extension: ${extension}`);
+
     const data = await response.json();
     const extensionData: ExtensionData = data.results[0].extensions[0];
 
@@ -71,15 +74,24 @@ const fetchExtensionDetails = async (extension: string): Promise<ExtensionDetail
     return { name: extension, displayName: extensionData.displayName, downloadCount, iconUri };
 };
 
-const ExtensionDetails: React.FC = async () => {
+const ExtensionDetails = async () => {
     const extensionDetails = await Promise.all(RECOMMENDED_EXTENSIONS.map(fetchExtensionDetails));
 
     return (
         <div className='extension-container'>
             {extensionDetails.map((extension) => (
                 <div key={extension.name} className='extension-item'>
-                    <Link href={``} target='_blank'>
-                        <img className='size-9' src={extension.iconUri} alt={extension.name} />
+                    <Link
+                        href={`https://marketplace.visualstudio.com/items?itemName=${extension.name}`}
+                        target='_blank'
+                        rel='noopener noreferrer'>
+                        <Image
+                            className='size-9'
+                            src={extension.iconUri}
+                            alt={extension.displayName}
+                            width={36}
+                            height={36}
+                        />
                     </Link>
                     <div className='extension-tooltip'>
                         <h3>{extension.displayName}</h3>

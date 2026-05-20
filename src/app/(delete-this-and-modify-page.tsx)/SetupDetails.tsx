@@ -16,7 +16,7 @@ interface Plugin {
 const FEATURES: Feature[] = [
     { name: 'Next.js 16' },
     { name: 'React 19' },
-    { name: 'Typescript 5' },
+    { name: 'TypeScript 5' },
     {
         name: 'ESLint 9'
     },
@@ -24,7 +24,7 @@ const FEATURES: Feature[] = [
     { name: 'App Directory' },
     { name: 'System, Light & Dark Mode' },
     { name: 'Next Bundle Analyzer' },
-    { name: 'Dockerfile for Node.js 24.12.0 & Bun 1.3.5 (alpine)' }
+    { name: 'Dockerfile for Node.js 24.15.0 & Bun 1.3.14 (alpine)' }
 ];
 
 const ESLINT_PLUGINS: Plugin[] = [
@@ -44,12 +44,9 @@ const PRETTIER_PLUGINS: Plugin[] = [
     }
 ];
 
-const SetupDetails: React.FC = () => {
+const SetupDetails = () => {
     return (
-        <div
-            style={{
-                maxWidth: '800px'
-            }}>
+        <div className='setup-container'>
             <div>
                 <ol className='features-list'>
                     {FEATURES.map((feature, index) => (

@@ -6,10 +6,6 @@
     border-radius: 9999px; /* rounded-full */
 }
 
-.theme-switch-container.dark {
-    background-color: var(--background);
-}
-
 .theme-switch-inner-container {
     display: flex;
     width: auto;
@@ -18,16 +14,6 @@
     border-radius: 1rem;
     overflow: hidden;
     border: 1px solid var(--foreground);
-}
-
-.theme-switch-inner-container.dark {
-    background-color: var(--background);
-}
-
-@media (min-width: 640px) {
-    .theme-switch-inner-container {
-        flex-direction: row;
-    }
 }
 
 /* Button styling */
@@ -61,12 +47,12 @@
 }
 
 /* Button label hidden on small screens */
-.theme-switch-button h3 {
+.theme-switch-button span {
     display: none;
 }
 
 @media (min-width: 640px) {
-    .theme-switch-button h3 {
+    .theme-switch-button span {
         display: block;
     }
 }

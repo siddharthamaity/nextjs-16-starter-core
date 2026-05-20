@@ -57,19 +57,23 @@ const SWITCH_DATA: SwitchOption[] = [
     }
 ];
 
-const ThemeSwitch: React.FC = () => {
+const ThemeSwitch = () => {
     const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => setMounted(true), []);
 
     useEffect(() => {
-        const darkThemeMediaQuery =
-            typeof window !== 'undefined' ? window?.matchMedia('(prefers-color-scheme: dark)') : null;
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-        const isDarkMode = theme === 'system' ? darkThemeMediaQuery?.matches : theme === 'dark';
-        if (isDarkMode) document.documentElement.setAttribute('data-theme', 'dark');
-        else document.documentElement.setAttribute('data-theme', 'light');
+        const applyTheme = () => {
+            const isDarkMode = theme === 'system' ? mediaQuery.matches : theme === 'dark';
+            document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
+        };
+
+        applyTheme();
+        mediaQuery.addEventListener('change', applyTheme);
+        return () => mediaQuery.removeEventListener('change', applyTheme);
     }, [theme]);
 
     return (
@@ -81,7 +85,7 @@ const ThemeSwitch: React.FC = () => {
                         className={`theme-switch-button ${theme === data.value && mounted ? 'active' : ''}`}
                         onClick={() => setTheme(data.value)}>
                         {data.iconSvg}
-                        <h3>{data.name}</h3>
+                        <span>{data.name}</span>
                     </button>
                 ))}
             </div>
