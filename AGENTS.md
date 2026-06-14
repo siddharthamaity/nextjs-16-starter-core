@@ -9,12 +9,12 @@ Practical instructions for AI coding agents working in this repository.
 
 ## Fast Start
 
-- Install deps: `pnpm install`
-- Run dev server: `pnpm dev`
-- Build: `pnpm build`
-- Lint: `pnpm lint`
+- Install deps: `bun run install`
+- Run dev server: `bun run dev`
+- Build: `bun run build`
+- Lint: `bun run lint`
 
-No test framework is configured. Validate changes with `pnpm lint` and, when relevant, `pnpm build`.
+No test framework is configured. Validate changes with `bun run lint` and, when relevant, `bun run build`.
 
 ## Project Shape
 

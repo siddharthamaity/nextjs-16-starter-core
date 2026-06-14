@@ -80,8 +80,8 @@ To enhance development experience, install the following VS Code extensions:
     npm install
     # or with Yarn
     yarn install
-    # or with pnpm
-    pnpm install
+    # or with bun run
+    bun run install
     # or with Bun
     bun install
     ```
@@ -91,8 +91,8 @@ To enhance development experience, install the following VS Code extensions:
     npm run dev
     # or with Yarn
     yarn dev
-    # or with pnpm
-    pnpm dev
+    # or with bun run
+    bun run dev
     # or with Bun
     bun dev
     ```
@@ -102,8 +102,8 @@ To enhance development experience, install the following VS Code extensions:
     npm run build
     # or with Yarn
     yarn build
-    # or with pnpm
-    pnpm build
+    # or with bun run
+    bun run build
     # or with Bun
     bun run build
     ```
